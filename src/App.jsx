@@ -3,10 +3,11 @@ import Header from './components/Header'
 import TodoList from './components/TodoList'
 function App() {
   
-  const [TodoData, setTodoData] = useState([])
+  const [todoData, setTodoData] = useState([])
 
   function addTask (newTask){
     setTodoData((prev) => [...prev, newTask])
+    console.log(todoData)
   }
 
   return (
