@@ -14,6 +14,7 @@ export default function TodoItem ({data: {task}}) {
           onChange={changeCompleted}
         />
         <p>{formattedTime}</p>
+        <input type="text" value={task.name} />
       </li>
     );
 }
