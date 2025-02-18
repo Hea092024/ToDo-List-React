@@ -11,7 +11,7 @@ export default function Header ({data : {addTask}}) {
         <div>
             <h1>TODO List</h1>
             <form onSubmit={handleAddTask}>
-            <input type="text" />
+            <input type="text" onChange={(e) => setNewTask(e.target.value)} />
             <button type='submit'>Submit task</button>
             </form>
         </div>
