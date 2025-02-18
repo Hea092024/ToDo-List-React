@@ -4,6 +4,7 @@ export default function Header ({data : {addTask}}) {
     const [newTask, setNewTask] = useState("")
 
     function handleAddTask () { 
+        e.preventDefault();
 
     }
     return (
