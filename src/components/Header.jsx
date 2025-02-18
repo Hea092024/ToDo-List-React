@@ -12,8 +12,8 @@ export default function Header ({data : {addTask}}) {
             timeStamp: new Date(),
             completed : false ,
             id: uuid(),
-
-        }
+};
+        addTask(newTask);
 
     }
     return (
