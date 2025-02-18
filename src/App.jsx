@@ -7,7 +7,7 @@ function App() {
 
   function addTask (newTask){
     setTodoData((prev) => [...prev, newTask])
-    console.log(todoData)
+
   }
 
   return (
