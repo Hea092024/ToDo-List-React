@@ -5,6 +5,10 @@ function App() {
   
   const [TodoData, setTodoData] = useState([])
 
+  function addTask (newTask){
+    setTodoData((prev) => [...prev, newTask])
+  }
+
   return (
 
   
