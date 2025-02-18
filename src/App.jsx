@@ -16,7 +16,7 @@ function App() {
     <>
 
   <Header data={{addTask}}/>
-  <TodoList/>
+  <TodoList data={todoData}/>
 
     </>
   )

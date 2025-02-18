@@ -1,12 +1,14 @@
 import TodoItem from "./TodoItem"
-export default function TodoList () {
+export default function TodoList ({data : {todoData}}) {
     return (
       <>
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
+        <ul>
+          <TodoItem />
+          <TodoItem />
+          <TodoItem />
+          <TodoItem />
+          <TodoItem />
+        </ul>
       </>
     );
 }
