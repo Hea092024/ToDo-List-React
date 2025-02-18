@@ -1,10 +1,19 @@
 import { useState } from 'react'
+import { v4 as uuid } from 'uuid';
 
 export default function Header ({data : {addTask}}) {
-    const [newTask, setNewTask] = useState("")
+    const [newTaskName, setNewTaskName] = useState("")
 
     function handleAddTask () { 
         e.preventDefault();
+
+        const newTask = {
+            name: newTaskName,
+            timeStamp: new Date(),
+            completed : false ,
+            id: uuid(),
+
+        }
 
     }
     return (
