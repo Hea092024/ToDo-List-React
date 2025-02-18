@@ -9,7 +9,7 @@ export default function Header ({data : {addTask}}) {
 
         const newTask = {
             name: newTaskName,
-            timeStamp: new Date(),
+            timestamp: new Date(),
             completed : false ,
             id: uuid(),
 };
