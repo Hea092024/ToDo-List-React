@@ -1,7 +1,9 @@
-export default function TodoItem () {
+export default function TodoItem ({data: {task}}) {
     return (
-       <>
-       <h2>Todo item</h2>
-       </>
-    )
+      <>
+        <li>
+          <input type="checkbox" checked={task.completed} />
+        </li>
+      </>
+    );
 }

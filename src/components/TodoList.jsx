@@ -7,11 +7,9 @@ export default function TodoList({ data: { todoData } }) {
   return (
     <>
       <ul>
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
+       {todoData.map(task => {
+        return <TodoItem key={task.id} data={{task}}/>
+       })}
       </ul>
     </>
   );
