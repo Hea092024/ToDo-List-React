@@ -9,10 +9,10 @@ function App() {
 
   
     <>
-<div>
+
   <Header/>
   <TodoList/>
-</div>
+
     </>
   )
 }
