@@ -1,5 +1,7 @@
-import TodoItem from "./TodoItem"
-export default function TodoList({ data: {  sortedData,todoData, deleteTask, editTask } }) {
+import TodoItem from "./TodoItem";
+export default function TodoList({
+  data: { sortedData, deleteTask, editTask },
+}) {
   if (sortedData.length === 0) {
     return <h2>No tasks. Add a task to begin. </h2>;
   }
@@ -7,10 +9,11 @@ export default function TodoList({ data: {  sortedData,todoData, deleteTask, edi
   return (
     <>
       <ul>
-       {sortedData.map(task => {
-        return <TodoItem key={task.id} data={{task, deleteTask, editTask}}/>
-       })}
-
+        {sortedData.map((task) => {
+          return (
+            <TodoItem key={task.id} data={{ task, deleteTask, editTask }} />
+          );
+        })}
       </ul>
     </>
   );

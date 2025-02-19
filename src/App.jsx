@@ -43,7 +43,7 @@ const sortedData = [...todoData]
   return (
     <>
       <Header data={{ addTask, sortOption, setSortOption }} />
-      <TodoList data={{ todoData, editTask, deleteTask }} />
+      <TodoList data={{ sortedData, editTask, deleteTask }} />
     </>
   );
 }
