@@ -1,13 +1,13 @@
 import TodoItem from "./TodoItem"
-export default function TodoList({ data: { todoData, deleteTask, editTask } }) {
-  if (todoData.length === 0) {
+export default function TodoList({ data: {  sortedData,todoData, deleteTask, editTask } }) {
+  if (sortedData.length === 0) {
     return <h2>No tasks. Add a task to begin. </h2>;
   }
 
   return (
     <>
       <ul>
-       {todoData.map(task => {
+       {sortedData.map(task => {
         return <TodoItem key={task.id} data={{task, deleteTask, editTask}}/>
        })}
 
