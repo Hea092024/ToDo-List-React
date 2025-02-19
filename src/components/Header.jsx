@@ -17,12 +17,18 @@ export default function Header ({data : {addTask}}) {
 
     }
     return (
-        <div>
-            <h1>TODO List</h1>
-            <form onSubmit={handleAddTask}>
-            <input type="text" onChange={e => setNewTaskName(e.target.value)} />
-            <button type='submit'>Submit task</button>
-            </form>
-        </div>
-    )
+      <div>
+        <h1>TODO List</h1>
+        <form onSubmit={handleAddTask}>
+          <input type="text" onChange={(e) => setNewTaskName(e.target.value)} />
+          <button type="submit">Submit task</button>
+        </form>
+        <select name="" id="">
+          <option value="newest">Newest to Oldest</option>
+          <option value="oldest">Oldest to Newest</option>
+          <option value="a-to-z">A to Z</option>
+          <option value="z-to-a">Z to A</option>
+        </select>
+      </div>
+    );
 }
