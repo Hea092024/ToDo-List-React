@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import TodoList from "./components/TodoList";
+
 function App() {
   const [todoData, setTodoData] = useState([]);
   const [sortOption, setSortOption] = useState({
@@ -18,7 +19,7 @@ function App() {
 
   function editTask(id, updatedTask) {
     setTodoData((prev) =>
-      prev.map((task) => (task.id === id ? { ...task, updatedTask } : task))
+      prev.map((task) => (task.id === id ? { ...task, ...updatedTask } : task))
     );
   }
 
@@ -28,7 +29,7 @@ const sortedData = [...todoData]
     switch (sortOption.sortBy) {
       case "a-to-z":
         return a.name.localeCompare(b.name);
-     case "z-to-a":
+      case "z-to-a":
         return b.name.localeCompare(a.name);
       case "newest":
         return b.timestamp - a.timestamp;
