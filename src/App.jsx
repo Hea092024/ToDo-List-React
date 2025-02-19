@@ -4,6 +4,7 @@ import TodoList from './components/TodoList'
 function App() {
   
   const [todoData, setTodoData] = useState([])
+  const [sortOption, setSortOption] = useState("newest")
 
   function addTask (newTask){
     setTodoData((prev) => [...prev, newTask])
