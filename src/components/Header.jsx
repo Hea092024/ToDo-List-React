@@ -23,7 +23,7 @@ export default function Header ({data : {addTask, setSortOption}}) {
           <input type="text" onChange={(e) => setNewTaskName(e.target.value)} />
           <button type="submit">Submit task</button>
         </form>
-        <select name="" id="" onChange={() => setSortOption(prev =>({...prev, sortBy: e.target.value}))}>
+        <select name="" id="" onChange={(e) => setSortOption(prev =>({...prev, sortBy: e.target.value}))}>
           <option value="newest">Newest to Oldest</option>
           <option value="oldest">Oldest to Newest</option>
           <option value="a-to-z">A to Z</option>
