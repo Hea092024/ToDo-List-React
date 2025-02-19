@@ -41,7 +41,13 @@ export default function Header({
           type="checkbox"
           id="hideorshow"
           checked={sortOption.hideCompleted}
-        onChange={(e) => setSortOption((prev) => ({ ...prev, hideCompleted: e.target.checked }))}/>
+          onChange={(e) =>
+            setSortOption((prev) => ({
+              ...prev,
+              hideCompleted: e.target.checked,
+            }))
+          }
+        />
       </label>
     </div>
   );
