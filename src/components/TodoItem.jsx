@@ -3,6 +3,7 @@ export default function TodoItem ({data: {task, editTask, deleteTask}}) {
 const [isReadOnly, setISReadOnly] = useState(true);
 const [updatedTaskName , setUpdatedTaskName] = useState(task.name);
     function changeCompleted () {
+      editTask(task.id, {...task, completed: !task.completed})
 
     }
 
