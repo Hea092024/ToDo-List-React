@@ -22,7 +22,23 @@ function App() {
     );
   }
 
-  const sortedData = [...todoData].filter(task => !task.completed || !sortOption.hideCompleted)
+const sortedData = [...todoData]
+  .filter((task) => !task.completed || !sortOption.hideCompleted)
+  .sort((a, b) => {
+    switch (sortOption.sortBy) {
+      case "a-to-z":
+        return a.name.localeCompare(b.name);
+     case "z-to-a":
+        return b.name.localeCompare(a.name);
+      case "newest":
+        return b.timestamp - a.timestamp;
+      case "oldest":
+        return a.timestamp - b.timestamp;
+      default:
+        return 0;
+    }
+  });
+
 
   return (
     <>
