@@ -1,4 +1,4 @@
-export default function TodoItem ({data: {task}}) {
+export default function TodoItem ({data: {task, editTask, deleteTask}}) {
 
     function changeCompleted () {
 
