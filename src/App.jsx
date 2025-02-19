@@ -24,7 +24,7 @@ setTodoData((prev) => prev.map(task => (task.id === id ? {...task, updatedTask} 
     <>
 
   <Header data={{addTask}}/>
-  <TodoList data={{todoData}}/>
+  <TodoList data={{todoData, editTask, deleteTask}}/>
 
     </>
   )
