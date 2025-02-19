@@ -5,6 +5,13 @@ export default function TodoItem ({data: {task, editTask, deleteTask}}) {
     }
 
     const formattedTime = task.timestamp.toLocaleString("en-GB");
+    function handleEdit () {
+
+    }
+
+    function handleDelete () {
+
+    }
 
     return (
       <li>
@@ -15,6 +22,8 @@ export default function TodoItem ({data: {task, editTask, deleteTask}}) {
         />
         <p>{formattedTime}</p>
         <input type="text" value={task.name} />
+<button onClick={handleEdit}>Edit</button>
+<button onClick={handleDelete}>Delete</button>
       </li>
     );
 }
