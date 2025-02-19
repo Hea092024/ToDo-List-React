@@ -13,10 +13,10 @@ function App() {
       : [];
   });
 
-  const [sortOption, setSortOption] = useState({
-    sortBy: "newest",
-    hideCompleted: false,
-  });
+  const [sortOption, setSortOption] = useState (() => {
+    const savedSort = localStorage.getItem("sortOption");
+    return JSON.parse(savedSort) || { sortBy: "newest", hideCompleted: false };
+  })
 
   useEffect(() => {
     localStorage.setItem("todoData", JSON.stringify(todoData));
