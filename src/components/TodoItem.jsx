@@ -18,7 +18,7 @@ const [isReadOnly, setISReadOnly] = useState(true);
           onChange={changeCompleted}
         />
         <p>{formattedTime}</p>
-        <input type="text" value={task.name} />
+        <input type="text" value={task.name} readOnly={isReadOnly}/>
 <button onClick={handleEdit}>Edit</button>
 <button onClick={() => deleteTask(task.id)}>Delete</button>
       </li>
