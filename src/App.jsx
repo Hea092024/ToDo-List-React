@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState ,useEffect } from "react";
 import Header from "./components/Header";
 import TodoList from "./components/TodoList";
 
@@ -8,6 +8,11 @@ function App() {
     sortBy: "newest",
     hideCompleted: false,
   });
+
+  useEffect (() => {
+  localStorage.setItem("todoData", JSON.stringify(todoData))
+localStorage.setItem("sortOption", JSON.stringify(sortOption))
+  }, [todoData, sortOption])
 
   function addTask(newTask) {
     setTodoData((prev) => [...prev, newTask]);
