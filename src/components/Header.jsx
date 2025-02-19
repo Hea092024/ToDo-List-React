@@ -25,8 +25,7 @@ export default function Header({
         <button type="submit">Submit task</button>
       </form>
       <select
-        name=""
-        id=""
+        value={sortOption.sortBy}
         onChange={(e) =>
           setSortOption((prev) => ({ ...prev, sortBy: e.target.value }))
         }
