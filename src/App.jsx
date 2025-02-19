@@ -10,6 +10,14 @@ function App() {
 
   }
 
+  function deleteTask (id) {
+    setTodoData((prev) => prev.filter(task => task.id !== id))
+  }
+
+  function editTask (id, updatedTask) {
+setTodoData((prev) => prev.map(task => (task.id === id ? {...task, updatedTask} : task)))
+  }
+
   return (
 
   
