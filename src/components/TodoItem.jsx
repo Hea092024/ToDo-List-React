@@ -1,5 +1,6 @@
+import { useState } from "react";
 export default function TodoItem ({data: {task, editTask, deleteTask}}) {
-
+const [isReadOnly, setISReadOnly] = useState(true);
     function changeCompleted () {
 
     }
