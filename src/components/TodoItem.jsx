@@ -7,7 +7,7 @@ const [updatedTaskName , setUpdatedTaskName] = useState(task.name);
     }
 
     const formattedTime = task.timestamp.toLocaleString("en-GB");
-    function handleEdit () {
+    function handleEdit (e) {
 if(!isReadOnly) {
   editTask(task.id, {...task, name: updatedTaskName});
 }
@@ -22,7 +22,7 @@ setISReadOnly(prev => !prev)
           onChange={changeCompleted}
         />
         <p>{formattedTime}</p>
-        <input type="text" value={updatedTaskName} readOnly={isReadOnly} onChange ={() => setUpdatedTaskName(e.target.value)}/>
+        <input type="text" value={updatedTaskName} readOnly={isReadOnly} onChange ={(e) => setUpdatedTaskName(e.target.value)}/>
 <button onClick={handleEdit}>{isReadOnly ? "Edit" : "Save"}</button>
 <button onClick={() => deleteTask(task.id)}>Delete</button>
       </li>
