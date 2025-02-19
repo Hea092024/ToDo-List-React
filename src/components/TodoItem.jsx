@@ -9,10 +9,6 @@ export default function TodoItem ({data: {task, editTask, deleteTask}}) {
 
     }
 
-    function handleDelete () {
-
-    }
-
     return (
       <li>
         <input
@@ -23,7 +19,7 @@ export default function TodoItem ({data: {task, editTask, deleteTask}}) {
         <p>{formattedTime}</p>
         <input type="text" value={task.name} />
 <button onClick={handleEdit}>Edit</button>
-<button onClick={handleDelete}>Delete</button>
+<button onClick={() => deleteTask(task.id)}>Delete</button>
       </li>
     );
 }
